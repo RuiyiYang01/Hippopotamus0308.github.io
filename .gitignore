@@ -7,3 +7,7 @@
 node_modules/
 .idea/
 .vscode/
+
+# LaTeX source for CV — keep local only; compiled PDF lives in assets/
+cv-final.tex
+details.tex
