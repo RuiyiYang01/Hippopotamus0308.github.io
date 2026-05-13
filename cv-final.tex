@@ -1,0 +1,335 @@
+%-------------------------
+% Resume in Latex
+% Author : Harshibar
+% Based off of: https://github.com/jakeryang/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+% only for pdflatex
+% \input{glyphtounicode}
+
+% fontawesome
+\usepackage{fontawesome5}
+
+% fixed width
+\usepackage[scale=0.90,lf]{FiraMono}
+
+% blue-grey color palette
+\definecolor{heading-blue}{RGB}{24, 82, 132}     % deeper blue for section headings
+\definecolor{accent-blue}{RGB}{45, 110, 160}     % normal blue-grey for details / publication titles
+\definecolor{rule-blue}{RGB}{35, 95, 145}        % section rule
+\definecolor{text-grey}{gray}{0.08}
+\definecolor{dark-grey}{RGB}{80, 100, 115}
+
+\DeclareRobustCommand{\ebseries}{\fontseries{eb}\selectfont}
+\DeclareTextFontCommand{\texteb}{\ebseries}
+
+% custom underilne
+\usepackage{contour}
+\usepackage[normalem]{ulem}
+\renewcommand{\ULdepth}{1.8pt}
+\contourlength{0.8pt}
+\newcommand{\myuline}[1]{%
+  \uline{\phantom{#1}}%
+  \llap{\contour{white}{#1}}%
+}
+
+
+% custom font: helvetica-style
+\usepackage{tgheros}
+\renewcommand*\familydefault{\sfdefault} 
+%% Only if the base font of the document is to be sans serif
+\usepackage[T1]{fontenc}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{0in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting - serif
+% \titleformat{\section}{
+%   \vspace{2pt} \scshape \raggedright\large % header section
+% }{}{0em}{}[\color{black} \titlerule \vspace{-5pt}]
+
+% TODO EBSERIES
+% sans serif sections
+\titleformat{\section}{
+    \color{heading-blue}\bfseries\Large\raggedright
+}{}{0em}{}[\color{rule-blue}{\titlerule[1.5pt]}\vspace{-4pt}]
+
+% only for pdflatex
+% Ensure that generate pdf is machine readable/ATS parsable
+% \pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-1pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & {\color{dark-grey}\small #2}\vspace{1pt}\\ % top row of resume entry
+      \textit{#3} & {\color{dark-grey} \small #4}\\ % second row of resume entry
+    \end{tabular*}\vspace{-4pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeEduSubheading}[4]{
+  \item
+    \begin{tabular*}{\textwidth}[t]{@{}p{1.45cm}p{0.68\textwidth}@{\extracolsep{\fill}}r@{}}
+      \textbf{#1} & #2 & {\color{accent-blue}#3} \\
+                  & #4 & \\
+    \end{tabular*}\vspace{-6pt}
+}
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+      #1 & {\color{dark-grey}} \\
+    \end{tabular*}\vspace{-4pt}
+}
+
+\newcommand{\resumeWorkSubheading}[5]{
+  \item
+  \begin{tabular*}{\textwidth}[t]{@{}l@{\extracolsep{\fill}}r@{}}
+    \textbf{#1}, #2 & {\color{accent-blue}#3} \\
+    \ifx&#4&\else #4 \fi & {\color{accent-blue}#5} \\
+  \end{tabular*}\vspace{-6pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumePublication}[1]{
+  \item #1
+}
+
+\newcommand{\pubtitle}[1]{\textit{\textcolor{accent-blue}{#1}}}
+
+\newcommand{\resumeAward}[2]{
+  \vspace{2pt}
+  \noindent
+  \begin{tabularx}{\textwidth}{@{}p{0.03\textwidth}@{}X r@{}}
+    $\bullet$ & #1 & {\color{accent-blue}#2} \\
+  \end{tabularx}
+  \vspace{-4pt}
+}
+
+% CHANGED default leftmargin  0.15 in
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{0pt}}
+
+\color{text-grey}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    {\color{heading-blue}\textbf{\Huge Ruiyi Yang}} \\ \vspace{5pt}
+    {\color{accent-blue}\small
+    \hspace{1pt} \faMapMarker* \hspace{2pt}\texttt{Sydney, Australia} $|$ \hspace{1pt}
+    \faPhone* \texttt{+61 432481226} \hspace{1pt} $|$
+    \hspace{1pt} \faEnvelope \hspace{2pt} \texttt{ruiyi.yang@unsw.edu.au} \hspace{1pt}
+    }\\ \vspace{-3pt}
+\end{center}
+
+%-----------EXPERIENCE-----------
+\section{Education}
+\resumeSubHeadingListStart
+
+  \resumeEduSubheading
+    {Ph.D.}
+    {\textbf{University of New South Wales}, Sydney, Australia}
+    {Apr. 2024 -- Nov. 2027}
+    {\begin{tabular}[t]{@{}l@{}}
+      Computer Science \\
+      Supervisors: Prof. Flora Salim, A/Prof. Hao Xue, A/Prof. Imran Razzak
+    \end{tabular}}
+
+  \resumeEduSubheading
+    {M.S.}
+    {\textbf{University of New South Wales}, Sydney, Australia}
+    {Sep. 2022 -- Dec. 2023}
+    {Data Science and Decisions}
+
+  \resumeEduSubheading
+    {B.Eng.}
+    {\textbf{Beihang University}, Beijing, China}
+    {Sep. 2017 -- June. 2022}
+    {Software Engineering}
+
+\resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+
+\section{Work Experience}
+\resumeSubHeadingListStart
+
+  \resumeWorkSubheading
+    {University of New South Wales}
+    {Research Officer}
+    {Sydney, Australia}
+    {Advisors: Prof. Salil Kanhere, Dr. Rahat Masood, Prof. Flora Salim}
+    {Jul. 2025 -- Present}
+    \resumeItemListStart
+      \resumeItem{Worked in the project \textit{GuardianAgent: A Trustworthy Personal Agentic AI Platform}, focusing on privacy-preserving multi-agent system design.}
+      \resumeItem{Designed the privacy protection framework, including agent coordination, user data handling, and trustworthy interaction mechanisms.}
+      \resumeItem{Coordinated user study design, system revision, and manuscript preparation; two first-author papers are currently under submission.}
+    \resumeItemListEnd
+
+  \resumeWorkSubheading
+    {University of New South Wales}
+    {Casual Academic}
+    {Sydney, Australia}
+    {}
+    {Jul. 2024 -- Present}
+    \resumeItemListStart
+      \resumeItem{Taught tutorials for multiple undergraduate and postgraduate computer science and data science courses.}
+      \resumeItem{Mentored honours and master's students, co-supervising ``Taste of Research'' projects with Prof. Flora Salim.}
+    \resumeItemListEnd
+
+  \resumeWorkSubheading
+    {Cresstec Pty Ltd}
+    {Software Engineer Intern}
+    {Sydney, Australia}
+    {}
+    {Dec. 2023 -- Present}
+    \resumeItemListStart
+      \resumeItem{Developed and maintained software modules for HDAC temperature control systems.}
+      \resumeItem{Built and improved React-based dashboards and data visualisation components for energy monitoring, scheduling, and operational analytics for both internal and customer usage.}
+    \resumeItemListEnd
+
+  \resumeWorkSubheading
+    {Jina AI}
+    {Software Engineer Intern}
+    {Beijing, China}
+    {}
+    {Sept. 2021 -- June. 2022}
+    \resumeItemListStart
+      \resumeItem{Maintained and fixed executors compatible with the core Jina framework.}
+      \resumeItem{Developed a cross-modal search example supporting both image and text indexing, enabling users to search images with text queries or retrieve descriptions from uploaded images.}
+      \resumeItem{Contributed to DocsQA, a question-answering system built on company product documentation.}
+      \resumeItem{Participated in the CLIP-as-Service project, integrating models into the framework to support bilingual retrieval and query understanding.}
+    \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+\section{Publications}
+
+\resumeItemListStart
+
+  \resumePublication{
+    \textbf{Ruiyi Yang}, Lihuan Li, Hao Xue, Flora D. Salim.
+    \pubtitle{STAR: Failure-Aware Markovian Routing for Multi-Agent Spatiotemporal Reasoning.}
+    Preprint, 2026.
+  }
+
+  \resumePublication{
+    \textbf{Ruiyi Yang}, Zechen Li, Hao Xue, Imran Razzak, Flora D. Salim.
+    \pubtitle{MAGE: Multi-Agent Self-Evolution with Co-Evolutionary Knowledge Graphs.}
+    Preprint, 2026.
+  }
+    
+  \resumePublication{
+    \textbf{Ruiyi Yang}, Hao Xue, Imran Razzak, Flora D. Salim.
+    \pubtitle{Beyond Single Pass, Looping Through Time: KG-IRAG with Iterative Knowledge Retrieval.}
+    Proceedings of the ACM Web Conference (WWW), 2026.
+  }
+
+  \resumePublication{
+    \textbf{Ruiyi Yang}, Hao Xue, Imran Razzak, Hakim Hacid, Flora D. Salim.
+    \pubtitle{RELOOP: Recursive Retrieval with Multi-Hop Reasoner and Planners for Heterogeneous QA.}
+    Preprint, 2025.
+  }
+
+  \resumePublication{
+    \textbf{Ruiyi Yang}, Hao Xue, Imran Razzak, Hakim Hacid, Flora D. Salim.
+    \pubtitle{Divide by Question, Conquer by Agent: SPLIT-RAG with Question-Driven Graph Partitioning.}
+    Preprint, 2025.
+  }
+
+  \resumePublication{
+    \textbf{Ruiyi Yang}, Flora D. Salim, Hao Xue.
+    \pubtitle{SSTKG: Simple Spatio-Temporal Knowledge Graph for Interpretable and Versatile Dynamic Information Embedding.}
+    Proceedings of the ACM Web Conference (WWW), 2024.
+  }
+
+\resumeItemListEnd
+
+
+\section{Honors \& Awards}
+
+\resumeAward
+  {UNSW Higher Degree by Research Scholarship}
+  {2024 -- Present}
+
+\resumeAward
+  {ACM Web Conference 2024 Oral Presentation}
+  {2024}
+
+\resumeAward
+  {Master Degree with Excellence, University of New South Wales}
+  {2023}
+
+
+
+%
+%-----------PROGRAMMING SKILLS-----------
+\section{Skills}
+ \begin{itemize}[leftmargin=0in, label={}]
+    \small{\item{
+     \textbf{Languages}{:Chinese(native); English(proficient); French(1.5 year full time learning experience); Japanese(JLPT-N2)} \\ \vspace{2pt}
+     \textbf{Programming}{: Python, C\#, JavaScript, Java, SQL, Bash, HTML/CSS} \\ \vspace{2pt}
+     \textbf{AI \& Machine Learning}{: LLM, RAG, Multi-Agent Systems, Knowledge Graphs, Time-Series Analysis} \\ \vspace{2pt}
+     \textbf{Software Development}{: React.js, Flask, Vue.js, Backend-Frontend Integration} \\ \vspace{2pt}
+     \textbf{Data \& Databases}{: PostgreSQL, MySQL, Neo4j, Cypher, Pandas, NumPy} \\ \vspace{2pt}
+    }}
+ \end{itemize}
+
+
+%-------------------------------------------
+\end{document}

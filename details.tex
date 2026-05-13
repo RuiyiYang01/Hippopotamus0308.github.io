@@ -1,0 +1,236 @@
+%-------------------------
+% CV [RESEARCH BASED]
+% Author : Student Development Council , IISERB
+% Credits : Ashim Dhor (SDC'22,Data Science and Engineering)
+%------------------------
+
+
+\documentclass[10pt,article]{article}
+\usepackage[letterpaper,margin=0.2in]{geometry}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\usepackage{url}
+\usepackage{enumitem}
+\usepackage{palatino}
+\usepackage{fontawesome}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{xcolor}
+\definecolor{mygrey}{gray}{0.82}
+
+\usepackage{hyperref} % Added hyperref package for clickable links
+
+% Added fancyhdr package for header and footer customization
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\fancyfoot[L]{Ruiyi Yang} % Your name at the left bottom corner
+\fancyfoot[R]{z5442708@ad.unsw.edu.au \vspace{1pt}\rule{\textwidth}{0.4pt}} % Your email with border line above
+\renewcommand{\footrulewidth}{0pt} % Remove the default footer rule
+
+\textheight=9.75in
+\raggedbottom
+
+\setlength{\tabcolsep}{0in}
+\newcommand{\isep}{-4pt}
+\newcommand{\lsep}{-2cm}
+\newcommand{\psep}{-1cm}
+
+\setlist[itemize]{leftmargin=*}
+
+\newcommand{\resitem}[1]{\item #1\vspace{-2pt}}
+\newcommand{\resheading}[1]{%
+  {\small\colorbox{mygrey}{%
+    \begin{minipage}{0.97\textwidth}\centering\textbf{#1 \vphantom{p\^{E}}}\end{minipage}%
+  }}%
+}
+\newcommand{\ressubheading}[2]{%
+  \begin{tabular*}{6.62in}{l @{\extracolsep{\fill}} r}%
+    \textbf{#1} & \textit{#2}%
+  \end{tabular*}\vspace{-8pt}%
+}
+
+
+\begin{document}
+\begin{table}
+\begin{minipage}{0\linewidth}
+\centering
+\includegraphics[height=1in]{unsw-crest.pdf}
+\end{minipage}
+\begin{minipage}{4.5\linewidth}
+\setlength{\tabcolsep}{80pt}
+\def\arraystretch{1.1}
+\begin{tabular}{ll}
+\textbf{\Large{Ruiyi Yang}} & \faLinkedin\hspace{0.1cm}\href{https://www.linkedin.com/in/ruiyi-yang-058647206/}{LinkedIn} \\
+\textbf{PhD Student} & \faGithub:\href{https://github.com/Hippopotamus0308}{GitHub} \\
+University of New South Wales \\
+Phone No.: +61 0432481226 \\
+E-mail: \href{mailto:ruiyi.yang@student.unsw.edu.au}{ruiyi.yang@student.unsw.edu.au or louisyang0308@163.com} \\
+\end{tabular}
+\end{minipage}
+\end{table}
+
+
+\resheading{\textbf{PROFILE}}\\[0.2cm]
+
+\begin{itemize}
+\item With a fervent interest in Computer Science and Data Science, I am committed to forging cutting-edge technologies that pave the way for the future. My undergraduate degree in software engineering has equipped me with robust fundamental skills. Pursuing a master's in data science at UNSW has not only offered me a great chance for attending scientific research, but has also ignited an enthusiasm for deeper academic exploration. I possess expertise in knowledge graph embedding and natural language processing. My research aspirations are centered around the convergence of these domains, particularly the amalgamation of knowledge graphs (KG) and large language models (LLM). As a PhD student in UNSW under the supervision of Prof. Flora Salim, Dr. Hao Xue and Dr. Imran Razzak, currently my primary objective is to achieve mutual enhancement of LLM and KG for complex query handling.
+
+
+\end{itemize}
+
+\resheading{\textbf{EDUCATION}}\\
+\begin{itemize}
+  \item \textbf{Beihang University} \hfill Beijing, China \\
+  Sino-French Engineer School \hfill Sep 2017 to Jan 2019 \\
+  Software Engineering, College of Software \hfill Jan 2019 to June 2022 \\
+  GPA: 3.402/4.0  \\
+  Degree obtained: \textbf{Bachelor of Engineering} (June 2022)
+  
+  \item \textbf{University of New South Wales} \hfill Sydney, Australia\\
+  Master of Data Science and Decisions  \hfill Sept 2022 – Dec 2023 \\
+  WAM: 85.50
+
+  \item \textbf{University of New South Wales} \hfill Sydney, Australia\\
+  PhD student with Tuition Fee Scholarship(TFS)\hfill May 2024 – now \\
+\end{itemize}
+
+\resheading{\textbf{TECHNICAL SKILLS}}\\
+\begin{itemize}
+  \item \textbf{Programming Languages} \\
+  Python, Java, C\#, C, R, SQL, JavaScript/TypeScript
+
+  \item \textbf{Backend \& Web} \\
+  Flask, Vue.js, REST APIs
+
+  \item \textbf{LLM \& RAG} \\
+  Retrieval-Augmented Generation (RAG), LangChain/LangGraph, prompt engineering, tool/function calling
+
+  \item \textbf{Knowledge Graph \& Retrieval} \\
+  Neo4j, Cypher, knowledge graph modeling, vector search (e.g., FAISS)
+
+  \item \textbf{ML Libraries} \\
+  PyTorch, TensorFlow
+
+  \item \textbf{DevOps \& Cloud} \\
+  Azure DevOps (Repos, Pipelines/CI-CD), Docker, Git
+\end{itemize}
+
+% \resheading{\textbf{RELEVANT COURSES}}\\
+% \begin{itemize}
+%   \item \textbf{Related Math Courses}: Mathematical Analysis, Algebra, Geometry, Discrete Mathematics, Mathematical Modeling, Probability Theory. Multivariable Analysis, Graph Theory, Statistical Inference
+%   \item \textbf{Related Computer Courses}: Data Structure and Algorithms, Java, Software engineering project, Database, Operating System, Software Testing, Computer Vision, Big Data and Cloud Computing, Data visualization, Machine Learning and Data mining, Information Retrieval and Web Search
+%   \item \textbf{Other Courses}: Economics and Management, Business Economics, Economics of Strategy, Financial Technology.
+  
+% \end{itemize}
+
+\resheading{\textbf{RESEARCH EXPERIENCE}}\\
+\begin{itemize}
+  \item \textbf{Knowledge Graph Construction with Academic Big-data} \hfill November 2021 - May 2022 \\
+  In School of Software, Beihang University, this project aims to do Knowledge Graph (KG) construction and completion using specific academic data. This thesis used the service-oriented BERT-BiLSTM-CRF model to conduct subject keywords and matched the extracted information with the corresponding content in the structured data, further optimizing the entity content of the knowledge map. The relationship between entities based on knowledge modeling are also optimized, so that the content of the final knowledge graph fully integrates the existing subject information. \\
+    \textbf{One thesis is written on demand of my bachelor graduation defense.}
+  
+  \item \textbf{SSTKG: Simple Spatio-Temporal Knowledge Graph for Intepretable and Versatile Dynamic Information Embedding} \\ \hfill February 2023 - November 2023 \\
+    In Collective and Robust Ubiquitous Intelligence (CRUISE) Lab, UNSW AI Institute, this research introduces a novel framework for constructing and exploring spatial-temporal KGs. In our framework, we first incorporate both spatial and temporal data to construct KGs, and then further exploit these KGs through a newly-raised 3-steps embeddings method. These embeddings can be used for future temporal sequence prediction and spatial information recommendation, providing valuable insights for various applications such as retail sales forecasting and traffic volume prediction. By integrating spatial-temporal data into KGs, our framework offers a more comprehensive understanding of the underlying patterns and trends, thereby enhancing the accuracy of predictions and the relevance of recommendations. This work paves the way for more effective utilization of spatial-temporal data in KGs, with potential impacts across a wide range of sectors. \\
+    \textbf{One paper is accepted for oral presentation on The Web Conference (WWW) 2024.}
+
+    \item \textbf{Beyond Single Pass, Looping Through Time: KG-IRAG with Iterative Knowledge Retrieval} \\ \hfill April 2024 - October 2024 \\
+    Graph Retrieval-Augmented Generation (GraphRAG) has proven highly effective in enhancing the performance of Large Language Models (LLMs) on tasks that require external knowledge. By leveraging Knowledge Graphs (KGs), GraphRAG improves information retrieval for complex reasoning tasks, providing more precise and comprehensive retrieval and generating more accurate responses to QAs. However, most RAG methods fall short in addressing multi-step reasoning, particularly when both information extraction and inference are necessary. To address this limitation, this paper presents \textbf{Knowledge Graph-Based Iterative Retrieval-Augmented Generation (KG-IRAG)}, a novel framework that integrates KGs with iterative reasoning to improve LLMs' ability to handle queries involving temporal and logical dependencies. Through iterative retrieval steps, KG-IRAG incrementally gathers relevant data from external KGs, enabling step-by-step reasoning. The proposed approach is particularly suited for scenarios where reasoning is required alongside dynamic temporal data extraction, such as determining optimal travel times based on weather conditions or traffic patterns. Experimental results show that KG-IRAG improves accuracy in complex reasoning tasks by effectively integrating external knowledge with iterative, logic-based retrieval. Additionally, three new datasets: \textit{weatherQA-Irish},~\textit{weatherQA-Sydney}, and~\textit{trafficQA-TFNSW}, are formed to evaluate KG-IRAG’s performance, demonstrating its potential beyond traditional RAG applications.\\
+    \textbf{One paper is accepted on The Web Conference (WWW) 2026.}
+
+    \item \textbf{Divide by Question, Conquer by Agent: SPLIT-RAG with Question-Driven Graph Partitioning} \\ \hfill December 2024 - May 2025 \\
+    Retrieval-Augmented Generation (RAG) systems empower large language models (LLMs) with external knowledge, yet struggle with efficiency-accuracy trade-offs when scaling to large knowledge graphs. Existing approaches often rely on monolithic graph retrieval, incurring unnecessary latency for simple queries and fragmented reasoning for complex multi-hop questions. To address these challenges, this paper propose \textbf{SPLIT-RAG}, a multi-agent RAG framework that addresses these limitations with question-driven semantic graph partitioning and collaborative subgraph retrieval. The innovative framework first create \textbf{S}emantic \textbf{P}artitioning of \textbf{L}inked \textbf{I}nformation, then use the \textbf{T}ype-Specialized knowledge base to achieve \textbf{Multi-Agent RAG}. The attribute-aware graph segmentation manages to divide knowledge graphs into semantically coherent subgraphs, ensuring subgraphs align with different query types, while lightweight LLM agents are assigned to partitioned subgraphs, and only relevant partitions are activated during retrieval, thus reduce search space while enhancing efficiency. Finally, a hierarchical merging module resolves inconsistencies across subgraph-derived answers through logical verifications. Extensive experimental validation demonstrates considerable improvements compared to existing approaches. \\
+    \textbf{One paper is currently under review.}
+
+    \item \textbf{RELOOP: \underline{Re}cursive Retrieva\underline{l} with Multi-H\underline{o}p Reas\underline{o}ner and \underline{P}lanners for Heterogeneous QA} \\ \hfill May 2025 - November 2026 \\
+    Retrieval-augmented generation (RAG) remains brittle on multi-step questions and heterogeneous evidence sources, trading accuracy against latency and token/tool budgets. This paper introduces \textbf{RELOOP}, a structure aware framework using \textbf{Hierarchical Sequence (HSEQ)} that (i) linearize documents, tables, and knowledge graphs into a reversible hierarchical sequence with lightweight structural tags, and (ii) perform structure-aware iteration to collect just-enough evidence before answer synthesis. A Head Agent provides guidance that leads retrieval, while an Iteration Agent selects and expands HSeq via structure-respecting actions (e.g., parent/child hops, table row/column neighbors, KG relations); Finally the head agent composes canonicalized evidence to genearte the final answer, with an optional refinement loop to resolve detected contradictions. Experiments on HotpotQA (text), HybridQA/TAT-QA (table+text), and MetaQA (KG) show consistent EM/F1 gains over strong single-pass, multi-hop, and agentic RAG baselines with high efficiency. Besides, RELOOP exhibits three key advantages: (1) a \textbf{format-agnostic unification} that enables a single policy to operate across text, tables, and KGs without per-dataset specialization; (2) \textbf{guided, budget-aware iteration} that reduces unnecessary hops, tool calls, and tokens while preserving accuracy; and (3) \textbf{evidence canonicalization for reliable QA}, improving answers consistency and auditability. \\
+    \textbf{One paper is currently under review.}
+
+    \item \textbf{GuardianAgent: A Trustworthy Personal Agentic AI Platform} \\ \hfill Sept 2025 - Present \\
+   Individuals' data is continuously collected by applications, websites, and devices, often without meaningful consent and under manipulative \textit{dark patterns}, leading to limited user control and a growing digital power imbalance. This project proposes \textbf{GuardianAgent}, a user-centric, transparent personal AI system that bridges \textbf{AI, cybersecurity, ethics, and law} to restore user agency. GuardianAgent is designed to (i) \textbf{audit and monitor} app permissions, data flows, and user interactions to detect hidden privacy/security risks; (ii) \textbf{advocate and intervene} in risky interactions (e.g., blocking access, revoking permissions, obfuscating sensitive information); and (iii) \textbf{protect user data} via privacy-preserving techniques (e.g., differential privacy and on-device learning). The system prioritizes \textbf{context-aware, real-time decision support} with explainable recommendations and strong trust guarantees (e.g., traceable evidence and zero data leakage). \\
+    \textbf{Ongoing: framework design, prototype development, and user-study-driven evaluation.}
+    
+\end{itemize}
+
+\resheading{\textbf{PROFESSIONAL EXPERIENCE}}\\
+\begin{itemize}
+  \item \textbf{Jina AI} \hfill September 2021 - June 2022; \\
+  Engineer Intern \hfill Beijing, China \\
+  \textbf{Tasks} \\
+  - Maintaining \& fix executors which fits the core framework. \\
+ - A cross-model search example which can index both images and text. Users can search photos by just inputting text or upload a photo to get specific description. \\
+ - Contributing to the program docsQA, which is an question-answering robot using company’s product documents. \\
+ - Attended Clip-as-Service project, which received more than 11k stars on github. I integrated models into the framework to ensure bilingual queries. \\
+
+ \item \textbf{University of New South Wales} \hfill May 2024 - Now; \\
+  Tutor \hfill Sydney, Australia\\
+  \textbf{Work as a tutor for course DATA9001 Fundamental of Data Science; COMP9517 Computer Science} \\
+  - Facilitated weekly tutorial sessions for undergraduate and master students. \\
+  - Delivered live coding demonstrations to illustrate algorithms. \\
+  - Graded and provided detailed feedback on assignments. \\
+  - Maintained an online Q\&A forum. \\
+  
+\end{itemize}
+
+
+\resheading{\textbf{LEADERSHIP EXPERIENCE}}\\
+\begin{itemize}
+  \item \textbf{Summer Social Practice of Beihang University} \hfill July 2018 \\
+  Volunteer \hfill Xiaogan, Hubei, China \\
+   In order to investigated the local poverty alleviation situation in Liuji Town, Dawu County, Xiaogan City, Hubei Province, I stayed in the village for a month. During that period, I communicated with local people, visited their local tea-producing industry and local farm. I interviewed local residents and mayor, helped them analyzing local economic situation. In order to promote local tourism, we shoot 5 episodes of documentaries.
+  
+  \item \textbf{Winter Social Practice of Beihang University} \hfill Jan 2019 \\
+   Volunteer \hfill Wuhan, Hubei, China \\
+   I worked as a volunteer in local community in Hongshan District, Wuhan City, Hubei Province for a month in Jan 2019. In the community, I helped to organize events to celebrate local Lantern Festival, delivering supplies to the elderly with reduced mobility.
+
+   \item \textbf{Lecture of Introduction to Computer Science} \hfill Feb 2021 - Jul 2021 \\
+   Teaching Assistant \hfill Beijing China \\
+   As a TA, I was in charge of teaching student's python programming language in their Tutorial courses. I was also responsible for answering student's questions, checking their assignments after class.
+
+   \item \textbf{Software Developing Project in Beihang University} \hfill Apr 2020 - Jun 2020 \\
+   Group Leader \hfill Beijing China \\
+   As the team leader of 7 teammates, I participated in the development of the entire project, organized group meetings, completed the writing of all project documents, assigned the group tasks, and finished the final stage of testing and project presentation. We developed a fancy house renting website.
+   
+\end{itemize}
+
+\resheading{\textbf{PUBLICATIONS}}\\
+\begin{itemize}
+  \item \textbf{Python Web Scraping: Practical Case Studies} \hfill Writer \\
+  This book introduces the commonly used methods and tools of web scraping as well as the application and implementation of data processing, I am in charge of the fourth part: \textit{application scenarios and data processing}. The book has been published by Tsinghua University Publisher on July 2023.
+
+\end{itemize}
+
+\resheading{\textbf{LANGUAGES}}\\
+\begin{itemize}
+  \item \textbf{TOEFL iBT: 107} \hfill December 2021\\
+  Reading 30, Listening 29, Speaking 22, Writing 26 
+  \item \textbf{GRE: 327+4 } \hfill September 2021 \\
+  Verbal 157, Quantitative 170, Analytical Writing 4.0
+  \item \textbf{JLPT-N2 Certificate} \hfill July 2021 \\
+\end{itemize}
+
+\resheading{\textbf{ENGINEERING PROJECTS \& CONTRIBUTIONS}}\\
+\begin{itemize}
+\item \textbf{Clip-as-Service}  \hfill December 2022 - March 2023 \\
+  I attended an open source project clip-as-service (https://github.com/jina-ai/clip-as-service), which is a low-latency high-scalability service for embedding images and text, receiving more than 11.4k stars on github. I was in charge of integrating new models into the project.
+
+  \item \textbf{DocsQA}  \hfill March 2022 - June 2022 \\
+  During internship in Jina AI, I attended building an question-answering robot using company’s product documents. Users can ask questions like how to use certain product after putting documentations in the product. I worked in the team as a developer.
+
+   \item \textbf{Football Visualization Platform}
+   \hfill October 2022 - November 2022 \\
+  Based on 2021-2022 season's football data, I use R to develop a shiny app for visualize and analyze players performance in Spanish and Italian football leagues. As a course project, this work received a high mark of 92/100 from professor.
+
+  \item \textbf{Knowledge graph construction and completion using Academic Data} \hfill October 2021 - May 2022 \\
+  It's my bachelor graduation thesis. Whole project included building a knowledge graph around structured data, and knowledge extraction based on unstructured data. I was responsible for KG construction, entity and relation extraction, and the KG visible platform development (frontend and backend). All works were done by myself alone. The final KG contains 110+ subjects, 10k+ researching areas, 100k+ researchers and 1 million+ academic output entities.
+  
+  \item \textbf{Teaching Platform for Software Testing Course in Beihang University} \hfill July 2021 - August 2021 \\
+  Our team needs to develop a teaching platform for software-testing course for professors in Beihang University. I carried out the prototype design, front-end work and testing work.
+
+ \item \textbf{Statistics Displaying Platform for COVID-19} \hfill July 2021 \\
+  A platform for COVID-19 is needed for displaying COVID-19's real-time data. I took charge of prototype design, front-end work, and document writing.
+\end{itemize}
+
+\end{document}

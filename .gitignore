@@ -1,0 +1,9 @@
+.claude/
+.DS_Store
+*.aux
+*.log
+*.out
+*.synctex.gz
+node_modules/
+.idea/
+.vscode/
